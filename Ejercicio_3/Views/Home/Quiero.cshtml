@@ -1,0 +1,27 @@
+﻿@model Carro
+@{
+
+}
+
+<table class="table">
+    <thead class="thead-dark">
+        <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Color</th>
+            <th scope="col">Marca</th>
+            <th scope="col">Chasis</th>
+        </tr>
+    </thead>
+        <tbody>
+            <tr>
+                <th scope="row">@Model.ID</th>
+                <td>@Model.NOMBRE</td>
+                <td>@Model.COLOR</td>
+                <td>@Model.MARCA</td>
+                <td>@Model.CHASIS</td>
+            </tr>
+        </tbody>
+
+</table>
+<a class="btn btn-primary" asp-controller="Home" asp-action="Index">Home</a>

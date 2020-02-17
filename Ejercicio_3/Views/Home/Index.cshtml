@@ -1,0 +1,34 @@
+﻿@model Carro
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<form asp-action="Index" method="post">
+    <p class="h2">Introducir los datos</p>
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+            <label>Id</label>
+            <input asp-for="ID" type="number" class="form-control" required>
+        </div>
+        <div class="input-group-prepend">
+            <label>Nombre</label>
+            <input asp-for="NOMBRE" type="text" class="form-control" required>
+        </div>
+        <div class="input-group-prepend">
+            <label>Color</label>
+            <input asp-for="COLOR" type="text" class="form-control" required>
+        </div>
+        <div class="input-group-prepend">
+            <label>Marca</label>
+            <input asp-for="MARCA" type="text" class="form-control" required>
+        </div>
+        <div class="input-group-prepend">
+            <label>Chasis</label>
+            <input asp-for="CHASIS" type="text" class="form-control" required>
+        </div>
+        </div>
+        <p>
+            <input class="btn btn-primary" type="submit" value="Agregar">
+        </p>
+
+</form>
