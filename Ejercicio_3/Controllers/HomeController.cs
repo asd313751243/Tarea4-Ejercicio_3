@@ -10,6 +10,12 @@ namespace Ejercicio_3.Controllers
 {
     public class HomeController : Controller
     {
+        private readonly Listado _listado;
+
+        public HomeController()
+        {
+            _listado = new Listado();
+        }
 
         public IActionResult Index()
         {
@@ -21,16 +27,16 @@ namespace Ejercicio_3.Controllers
         {
             if (ModelState.IsValid)
             {
-                
+                _listado.Carros.Add(Notengo);
                 return RedirectToAction("Quiero", Notengo);
             }
             return View(Notengo);
         }
 
-        public IActionResult Quiero (Carro Notengo)
+        public IActionResult Quiero(Carro Notengo)
         {
 
-            return View(Notengo);
+            return View(_listado);
         }
 
 

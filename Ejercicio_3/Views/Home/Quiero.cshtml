@@ -1,4 +1,4 @@
-﻿@model Carro
+﻿@model Listado
 @{
 
 }
@@ -13,15 +13,20 @@
             <th scope="col">Chasis</th>
         </tr>
     </thead>
-        <tbody>
+    <tbody>
+
+        @foreach (var carro in Model.Carros)
+        {
             <tr>
-                <th scope="row">@Model.ID</th>
-                <td>@Model.NOMBRE</td>
-                <td>@Model.COLOR</td>
-                <td>@Model.MARCA</td>
-                <td>@Model.CHASIS</td>
+                <th scope="row">@carro.ID</th>
+                <td>@carro.NOMBRE</td>
+                <td>@carro.COLOR</td>
+                <td>@carro.MARCA</td>
+                <td>@carro.CHASIS</td>
             </tr>
-        </tbody>
+        }
+
+    </tbody>
 
 </table>
 <a class="btn btn-primary" asp-controller="Home" asp-action="Index">Home</a>
